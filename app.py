@@ -1,17 +1,10 @@
 from flask import Flask
 
-app = Flask(__name__)   # ✅ MUST be before routes
+app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello! DevOps Practical Running Successfully"
-
-@app.route("/login/<username>/<password>")
-def login(username, password):
-    if username == "admin" and password == "1234":
-        return "Login Successful"
-    else:
-        return "Invalid Credentials"
+    return "Hello I'm Bhoomika<br>I live in Ghatkopar<br>My roll no. 13<br>I'm 20<br>I like foods"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
